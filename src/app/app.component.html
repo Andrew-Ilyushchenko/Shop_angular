@@ -1,10 +1,17 @@
 <app-global-error></app-global-error>
 
-
+<input 
+ type="text"
+ class="filter"
+ placeholder="Find product..." 
+ [(ngModel)]="term"
+>
 
 <p *ngIf="loading" class="loading">Loading...</p>
 
-<app-product
- *ngFor="let product of products$ | async"
- [product]="product"
-></app-product>
+<div *ngIf="products$ | async as products">
+    <app-product
+     *ngFor="let product of products | filterProducts: term "
+     [product]="product"
+    ></app-product>
+</div>

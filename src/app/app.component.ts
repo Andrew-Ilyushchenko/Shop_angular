@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   title = 'my-app';
   products$: Observable<IProduct[]>
   loading = true
+  term = ''
 
   constructor(private productsService: ProductService) {
   }
