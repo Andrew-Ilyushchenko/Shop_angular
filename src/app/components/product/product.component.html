@@ -1,0 +1,23 @@
+<div class="card">    
+    <div class="card-img">
+     <img [src]="product.image" [alt]="product.title">
+    </div>
+    <h2 class="title">{{ product.title }}</h2>
+    <p class="price">{{ product.price | currency }}</p>
+    
+    <button 
+     class="btn-details"
+     (click)="details = !details"
+     [ngStyle]="{
+        'background-color': 
+        details ? 'rgb(179, 179, 255)' : 'rgb(249, 249, 29)'
+     }"
+    >
+     {{ details ? 'Hide' : 'Show' }} Details
+    </button>
+
+   <div class="card-details" *ngIf="details">
+    <p class="card-description">{{ product.description }}</p>
+    <p class="rate">Rate: {{ product.rating.rate }}</p>
+   </div>
+</div>
