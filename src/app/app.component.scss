@@ -5,3 +5,22 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+
+.container {
+    max-width: 73.125rem;
+    margin: auto;
+    padding: 0 0.9375rem;
+}
+.filter-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.filter{
+    border-radius: 1rem;
+    padding: 1rem;
+    border: solid grey 0.3rem;
+    border-radius: 1.25rem;
+    width: 100rem;
+}

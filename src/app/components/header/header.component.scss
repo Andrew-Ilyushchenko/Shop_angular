@@ -1,0 +1,25 @@
+.header {
+    margin-bottom: 1rem;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 2rem;
+}
+.navigation {
+    
+}
+.navigation-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+.navigation-list-item {
+    font-size: 1.7rem;
+}

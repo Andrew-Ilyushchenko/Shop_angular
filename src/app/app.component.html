@@ -1,17 +1,21 @@
-<app-global-error></app-global-error>
+<div class="container">
+        <app-global-error></app-global-error>
+    <app-header></app-header>
+    <div class="filter-wrap">
+        <input 
+            type="text"
+            class="filter"
+            placeholder="Find product..." 
+            [(ngModel)]="term"
+        >
+    </div>
 
-<input 
- type="text"
- class="filter"
- placeholder="Find product..." 
- [(ngModel)]="term"
->
+    <p *ngIf="loading" class="loading">Loading...</p>
 
-<p *ngIf="loading" class="loading">Loading...</p>
-
-<div *ngIf="products$ | async as products">
-    <app-product
-     *ngFor="let product of products | filterProducts: term "
-     [product]="product"
-    ></app-product>
+    <div *ngIf="products$ | async as products">
+        <app-product
+        *ngFor="let product of products | filterProducts: term "
+        [product]="product"
+        ></app-product>
+    </div>
 </div>
